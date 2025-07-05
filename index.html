@@ -3,10 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Prajwal Chaudhary - Creative Designer & Developer Portfolio. Specializing in graphic design, web development, and digital marketing.">
+    <meta name="keywords" content="Prajwal Chaudhary, portfolio, web developer, graphic designer, digital marketing, Nepal">
+    <meta name="author" content="Prajwal Chaudhary">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/your-repo-name/">
+    <meta property="og:title" content="Prajwal Chaudhary - Portfolio">
+    <meta property="og:description" content="Creative Designer & Developer Portfolio">
+    <meta property="og:image" content="https://img.freepik.com/free-vector/cute-boy-working-laptop-cartoon-vector-icon-illustration_138676-2387.jpg?w=400&h=400&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourusername.github.io/your-repo-name/">
+    <meta property="twitter:title" content="Prajwal Chaudhary - Portfolio">
+    <meta property="twitter:description" content="Creative Designer & Developer Portfolio">
+    <meta property="twitter:image" content="https://img.freepik.com/free-vector/cute-boy-working-laptop-cartoon-vector-icon-illustration_138676-2387.jpg?w=400&h=400&fit=crop">
+    
     <title>Prajwal Chaudhary - Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://formspree.io">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Security headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
 </head>
 <body>
     <!-- Navigation -->
@@ -317,7 +351,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/mldnvrgr" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/mldnvrgr" method="POST">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Your Name" required>
                         </div>
@@ -330,8 +364,14 @@
                         <div class="form-group">
                             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
                     </form>
+                    <div id="formMessage" class="form-message" style="display: none;"></div>
                 </div>
             </div>
         </div>
