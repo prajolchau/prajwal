@@ -1,0 +1,67 @@
+# GitHub Pages Configuration
+# This file ensures your site works properly on GitHub Pages
+
+# Site settings
+title: "Prajwal Chaudhary - Portfolio"
+description: "Creative Designer & Developer Portfolio"
+author: "Prajwal Chaudhary"
+email: "prajolchau@gmail.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - .gitignore
+  - node_modules
+  - package.json
+  - package-lock.json
+
+# Include files that should be processed
+include:
+  - _includes
+  - _layouts
+  - _sass
+  - assets
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Prajwal Chaudhary"
+
+# Plugins (if using Jekyll plugins)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Theme settings (if using a theme)
+# theme: minima
+
+# URL settings
+url: "https://yourusername.github.io/your-repo-name"
+baseurl: ""
+
+# Social media
+social:
+  name: "Prajwal Chaudhary"
+  links:
+    - "https://facebook.com/your-profile"
+    - "https://instagram.com/netanddic_official"
+    - "https://linkedin.com/in/your-profile"
+
+# SEO
+google_analytics: ""
+google_verification: "" 
